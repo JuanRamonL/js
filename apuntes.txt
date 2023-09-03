@@ -1,0 +1,17 @@
+Asincronismo:
+
+
+JS se define como un lenguaje síncrono y no bloqueante, con un 
+bucle de eventos(concurrencia),implementado con un único hilo para 
+sus interfaces de I/O.
+
+-----------------------------------------------------------------------------
+
+¿Qué es un Callback?
+
+Es una función que pasa a otra funcion como un argumento, que luego es invocado dentro del llamado, segun sea necesario.
+
+Ej:
+    https://developer.mozilla.org/es/docs/Glossary/Callback_function
+
+
