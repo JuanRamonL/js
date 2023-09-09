@@ -79,3 +79,40 @@ El código de estado (status codes) sirve para describir el estado de la petici�
 403 → Forbidden → Indica que no tenemos acceso a ese recurso aunque se esté autenticado.
 404 → Not Found → Indica que no existe el recurso que se está intentando acceder.
 500 → Internal Server Error → Indica que algo falló, es un error que retorna el servidor cuando la solicitud no pudo ser procesada.
+
+
+
+-----------------------------------------------------------------------------
+PROMESAS-----------
+
+🫱🏼‍🫲🏾 Las promesas son asíncronas, por lo que el código continuará su ejecución normalmente y luego dirá si la promesa se resolvió o se rechazó. Por lo que varias promesas pueden llegar a entrar en ejecución al mismo tiempo.
+
+Las promesas pueden suceder:
+
+Ahora
+En el futuro
+Nunca
+
+
+🛠️ Para crear una promesa:
+.
+Utilizamos la palabra reservada new seguida de la palabra Promise que es el constructor de la promesa. Este constructor recibe un único parámetro que es una función, la cuál a su vez, recibe otros dos parámetros: resolve y reject.
+
+El parámetro resolve se utiliza para cuando la promesa devuelve el valor correctamente.
+El parámetro reject, se usa en el que caso de que no funcione.
+
+🗃️ Una Promesa puede estar en uno de los siguientes estados:
+.
+
+PENDIENTE pending → Una promesa inicia en este estado: no cumplida, no rechazada:
+Una promesa inicialmente está pendiente.
+
+CUMPLIDA fulfilled → Significa que la operación se completó satisfactoriamente, .then(va => …)
+Cuando llamamos a resolve entonces la promesa pasa a estar resuelta.
+Cuando una promesa se resuelve entonces se ejecuta la función que pasamos al método .then 
+
+RECHAZADA rejected → significa que la operación falló, 
+.catch(err => …) Si llamamos a reject pasa a estar rechazada (obtenemos un error que nos va a indicar la razón del rechazo).
+Si la promesa es rechazada entonces se ejecuta la función que pasamos a .catch
+
+
